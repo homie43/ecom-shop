@@ -45,7 +45,7 @@
 }
 
 .nav__icons span i {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--primary-color);
   cursor: pointer;
 }
@@ -54,6 +54,29 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+.cart__icon,
+.favorite__icon {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 25%;
+  right: -40%;
+  width: 15px;
+  height: 15px;
+  content: "";
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  z-index: 2;
 }
 
 .mobile__menu {

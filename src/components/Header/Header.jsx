@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 // первый раз работаю с react bootstrap
 // импортирую контейнер и строку
 import { Container, Row } from "reactstrap";
+import { motion } from "framer-motion";
 
 import logo from "../../assets/images/eco-logo.png";
 import userIcon from "../../assets/images/user-icon.png";
@@ -48,14 +49,20 @@ const Header = () => {
             <div className="nav__icons">
               <span className="favorite__icon">
                 <i class="ri-heart-line"></i>
+                <span className="badge">1</span>
               </span>
 
               <span className="cart__icon">
                 <i class="ri-shopping-cart-line"></i>
+                <span className="badge">1</span>
               </span>
 
               <span>
-                <img src={userIcon} alt="user" />
+                <motion.img
+                  whileTap={{ scale: 1.3 }}
+                  src={userIcon}
+                  alt="user"
+                />
               </span>
             </div>
 
