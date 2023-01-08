@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Container, Row, Col } from "reactstrap";
 
 import Helmet from "../../components/Helmet/Helmet";
+import Services from "../../services/Services";
 
 import heroImg from "../../assets/images/hero-img.png";
 
@@ -40,6 +41,8 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+      <Services />
     </Helmet>
   );
 };
