@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import logo from "../../assets/images/eco-logo.png";
 import userIcon from "../../assets/images/user-icon.png";
 
-import "./Header.css";
+import "./Header.scss";
 
 const Header = () => {
   const nav__links = [
