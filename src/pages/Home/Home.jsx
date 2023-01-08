@@ -1,7 +1,9 @@
 import React from "react";
-import Helmet from "../../components/Helmet/Helmet";
-
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Container, Row, Col } from "reactstrap";
+
+import Helmet from "../../components/Helmet/Helmet";
 
 import heroImg from "../../assets/images/hero-img.png";
 
@@ -24,7 +26,9 @@ const Home = () => {
                   Labore reiciendis tempora adipisci praesentium quidem
                   suscipit. Adipisci doloremque deleniti doloribus officia.
                 </p>
-                <button className="buy__btn">SHOP NOW</button>
+                <motion.button whileTap={{ scale: 1.1 }} className="buy__btn">
+                  <Link to="/shop">SHOP NOW</Link>
+                </motion.button>
               </div>
             </Col>
 
