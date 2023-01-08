@@ -1,9 +1,11 @@
 import React from "react";
-import Helmet from "../components/Helmet/Helmet";
+import Helmet from "../../components/Helmet/Helmet";
 
 import { Container, Row, Col } from "reactstrap";
 
-import heroImg from "../assets/images/hero-img.png";
+import heroImg from "../../assets/images/hero-img.png";
+
+import "./Home.scss";
 
 const Home = () => {
   const year = new Date().getFullYear(); // вернет текущий год
