@@ -9,6 +9,7 @@ import Services from "../../services/Services";
 import heroImg from "../../assets/images/hero-img.png";
 
 import "./Home.scss";
+import ProductsList from "../../UI/ProductsList";
 
 const Home = () => {
   const year = new Date().getFullYear(); // вернет текущий год
@@ -43,6 +44,17 @@ const Home = () => {
       </section>
 
       <Services />
+
+      <section className="trending__products">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center">
+              <h2 className="section__title">Trending Products</h2>
+            </Col>
+            <ProductsList />
+          </Row>
+        </Container>
+      </section>
     </Helmet>
   );
 };

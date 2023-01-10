@@ -53,10 +53,10 @@ ul {
 a {
   text-decoration: none;
   color: unset;
-}
 
-a:hover {
-  color: unset;
+  &:hover {
+    color: unset;
+  }
 }
 
 img {
@@ -65,4 +65,8 @@ img {
 
 section {
   padding: 60px 0px;
+
+  &__title {
+    color: var(--primary-color);
+  }
 }
