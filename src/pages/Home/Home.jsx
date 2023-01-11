@@ -18,6 +18,10 @@ import "./home.scss";
 const Home = () => {
   const [trendingProducts, setTrendingProducts] = React.useState([]);
   const [bestProducts, setBestProducts] = React.useState([]);
+  const [mobileProducts, setMobileProducts] = React.useState([]);
+  const [wirelessProducts, setWirelessProducts] = React.useState([]);
+  const [popularProducts, setPopularProducts] = React.useState([]);
+  //popularProducts
 
   const year = new Date().getFullYear(); // вернет текущий год
 
@@ -30,8 +34,23 @@ const Home = () => {
       (item) => item.category === "sofa"
     );
 
+    const filtredMobileProducts = products.filter(
+      (item) => item.category === "mobile"
+    );
+
+    const filtredWirelessProducts = products.filter(
+      (item) => item.category === "wireless"
+    );
+
+    const filtredPopularProducts = products.filter(
+      (item) => item.category === "watch"
+    );
+
     setTrendingProducts(filtredTrendingProducts);
     setBestProducts(filtredBestProducts);
+    setMobileProducts(filtredMobileProducts);
+    setWirelessProducts(filtredWirelessProducts);
+    setPopularProducts(filtredPopularProducts);
   }, []);
 
   return (
@@ -111,6 +130,31 @@ const Home = () => {
             <Col lg="6" md="6" className="text-end">
               <img src={counterImg} alt="" />
             </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="new__arrivals">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5">
+              <h2 className="section__title">New Arrivals</h2>
+            </Col>
+
+            <ProductsList data={mobileProducts} />
+            <ProductsList data={wirelessProducts} />
+          </Row>
+        </Container>
+      </section>
+
+      <section className="popular__category">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5">
+              <h2 className="section__title">Popular in Category</h2>
+            </Col>
+
+            <ProductsList data={popularProducts} />
           </Row>
         </Container>
       </section>
