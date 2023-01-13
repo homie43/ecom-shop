@@ -11,6 +11,26 @@ import userIcon from "../../assets/images/user-icon.png";
 import "./Header.scss";
 
 const Header = () => {
+  const headerRef = React.useRef(null);
+  const stickyHeaderFunc = () => {
+    document.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        headerRef.current.classList.add("sticky__header");
+      } else {
+        headerRef.current.classList.remove("sticky__header");
+      }
+    });
+  };
+
+  React.useEffect(() => {
+    stickyHeaderFunc();
+
+    return () => window.removeEventListener("scroll", stickyHeaderFunc);
+  });
+
   const nav__links = [
     { path: "home", display: "Home" },
     { path: "shop", display: "Shop" },
@@ -18,7 +38,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <Container>
         <Row>
           <div className="nav__wrapper">
