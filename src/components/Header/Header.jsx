@@ -8,9 +8,10 @@ import { motion } from "framer-motion";
 import logo from "../../assets/images/eco-logo.png";
 import userIcon from "../../assets/images/user-icon.png";
 
-import "./Header.scss";
+import "./header.scss";
 
 const Header = () => {
+  // реализация sticky header-а в реакте
   const headerRef = React.useRef(null);
   const stickyHeaderFunc = () => {
     document.addEventListener("scroll", () => {
@@ -24,12 +25,15 @@ const Header = () => {
       }
     });
   };
-
   React.useEffect(() => {
     stickyHeaderFunc();
 
     return () => window.removeEventListener("scroll", stickyHeaderFunc);
   });
+
+  // реализация гамбергер меню в реакте
+  const menuRef = React.useRef(null);
+  const menuToggle = () => menuRef.current.classList.toggle("active__menu");
 
   const nav__links = [
     { path: "home", display: "Home" },
@@ -49,7 +53,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="navigation">
+            <div className="navigation" ref={menuRef} onClick={menuToggle}>
               <ul className="menu">
                 {nav__links.map((item, index) => (
                   <li className="nav__item" key={index}>
@@ -84,12 +88,11 @@ const Header = () => {
                   alt="user"
                 />
               </span>
-            </div>
-
-            <div className="mobile__menu">
-              <span>
-                <i class="ri-menu-line"></i>
-              </span>
+              <div className="mobile__menu">
+                <span onClick={menuToggle}>
+                  <i class="ri-menu-line"></i>
+                </span>
+              </div>
             </div>
           </div>
         </Row>
