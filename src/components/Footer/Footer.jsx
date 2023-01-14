@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="footer">
       <Container>
         <Row>
-          <Col lg="4">
+          <Col lg="4" md="6" className="mb-4">
             <div className="logo">
               <div>
                 <h1 className="text-white">Multimarket</h1>
@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
           </Col>
 
-          <Col lg="3">
+          <Col lg="3" md="3" className="mb-4">
             <div className="footer__quick-links">
               <h4 className="quick__links-title text-white">Top Categories</h4>
               <ListGroup>
@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg="2">
+          <Col lg="2" md="3" className="mb-4">
             <div className="footer__quick-links">
               <h4 className="quick__links-title text-white">Useful Links</h4>
               <ListGroup>
@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg="3">
+          <Col lg="3" md="5" className="mb-4">
             <div className="footer__quick-links">
               <h4 className="quick__links-title text-white">Contacts</h4>
               <ListGroup className="footer__contacts">
@@ -99,7 +99,7 @@ const Footer = () => {
 
           <Col lg="12">
             <p className="footer__copyright">
-              Copyright {year} developed by{" "}
+              Copyright {year} developed by
               <a href="https://github.com/homie43">Vladimir Kopylov</a>
             </p>
           </Col>
