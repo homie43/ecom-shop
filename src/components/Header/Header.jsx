@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 // импортирую контейнер и строку
 import { Container, Row } from "reactstrap";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 import logo from "../../assets/images/eco-logo.png";
 import userIcon from "../../assets/images/user-icon.png";
@@ -40,6 +41,8 @@ const Header = () => {
     { path: "shop", display: "Shop" },
     { path: "cart", display: "Cart" },
   ];
+
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
   return (
     <header className="header" ref={headerRef}>
@@ -78,7 +81,7 @@ const Header = () => {
 
               <span className="cart__icon">
                 <i class="ri-shopping-cart-line"></i>
-                <span className="badge">1</span>
+                <span className="badge">{totalQuantity}</span>
               </span>
 
               <span>

@@ -2,10 +2,28 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Col } from "reactstrap";
+import { toast } from "react-toastify";
 
-import "../SCSS/product-card.scss";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../redux/slices/cartSlice";
+
+import "../../SCSS/product-card.scss";
 
 const ProductCard = ({ item }) => {
+  const dispatch = useDispatch();
+  const addToCart = () => {
+    dispatch(
+      addItem({
+        id: item.id,
+        productName: item.productName,
+        price: item.price,
+        image: item.imgUrl,
+      })
+    );
+
+    toast.success("Product added successfully");
+  };
+
   return (
     <Col lg="3" md="4" className="mb-2">
       <div className="product__item">
@@ -24,7 +42,7 @@ const ProductCard = ({ item }) => {
         </div>
         <div className="product__card-bottom d-flex align-items-center justify-content-between">
           <span className="price">${item.price}</span>
-          <motion.span whileTap={{ scale: 1.2 }}>
+          <motion.span whileTap={{ scale: 1.2 }} onClick={addToCart}>
             <i class="ri-add-line"></i>
           </motion.span>
         </div>
