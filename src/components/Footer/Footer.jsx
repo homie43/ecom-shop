@@ -100,7 +100,7 @@ const Footer = () => {
           <Col lg="12">
             <p className="footer__copyright">
               Copyright {year} developed by
-              <a href="https://github.com/homie43">Vladimir Kopylov</a>
+              <a href="https://github.com/homie43"> Vladimir Kopylov</a>
             </p>
           </Col>
         </Row>
