@@ -1,0 +1,24 @@
+.product {
+  &__details {
+    margin-top: 100px;
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__rating {
+    span i {
+      color: rgba(255, 127, 80, 0.847);
+    }
+
+    p span {
+      color: rgba(255, 127, 80, 0.847);
+    }
+  }
+
+  &__price {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
