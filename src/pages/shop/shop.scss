@@ -41,3 +41,16 @@
     color: var(--primary-color);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .filter {
+    &__widget {
+      margin-bottom: 30px;
+
+      select {
+        padding: 7px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
