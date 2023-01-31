@@ -166,6 +166,7 @@ const ProductDetails = () => {
                             type="text"
                             placeholder="Enter your name"
                             ref={reviewUser}
+                            required
                           />
                         </div>
 
@@ -208,6 +209,7 @@ const ProductDetails = () => {
                             rows={4}
                             type="text"
                             placeholder="Review Message"
+                            required
                           />
                         </div>
 

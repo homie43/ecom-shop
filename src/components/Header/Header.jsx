@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 // первый раз работаю с react bootstrap
 // импортирую контейнер и строку
 import { Container, Row } from "reactstrap";
@@ -32,8 +32,9 @@ const Header = () => {
     return () => window.removeEventListener("scroll", stickyHeaderFunc);
   });
 
-  // реализация гамбергер меню в реакте
+  // реализация гамбургер меню в реакте
   const menuRef = React.useRef(null);
+
   const menuToggle = () => menuRef.current.classList.toggle("active__menu");
 
   const nav__links = [
@@ -43,6 +44,12 @@ const Header = () => {
   ];
 
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
+  const navigate = useNavigate();
+  const navigateToCart = () => {
+    navigate("/cart");
+    console.log("navigate");
+  };
 
   return (
     <header className="header" ref={headerRef}>
@@ -79,7 +86,7 @@ const Header = () => {
                 <span className="badge">1</span>
               </span>
 
-              <span className="cart__icon">
+              <span className="cart__icon" onClick={navigateToCart}>
                 <i class="ri-shopping-cart-line"></i>
                 <span className="badge">{totalQuantity}</span>
               </span>
