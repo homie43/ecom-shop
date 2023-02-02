@@ -11,6 +11,7 @@ import { removeItem } from "../../redux/slices/cartSlice";
 import "./cart.scss";
 
 const Cart = () => {
+  const cartTick = ["Image", "Title", "Price", "Qty", "Delete"];
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
 
@@ -28,11 +29,9 @@ const Cart = () => {
                 <table className="table bordered">
                   <thead>
                     <tr>
-                      <th>Image</th>
-                      <th>Title</th>
-                      <th>Price</th>
-                      <th>Qty</th>
-                      <th>Delete</th>
+                      {cartTick.map((item) => (
+                        <th>{item}</th>
+                      ))}
                     </tr>
                   </thead>
 
