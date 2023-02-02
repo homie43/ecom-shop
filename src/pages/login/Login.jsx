@@ -2,32 +2,21 @@ import React from "react";
 import { Container, Row, Col, Form, FormGroup } from "reactstrap";
 import { Link } from "react-router-dom";
 
-import Helmet from "../components/Helmet/Helmet";
+import Helmet from "../../components/Helmet/Helmet";
 
-import "./login/login.scss";
+import "./login.scss";
 
-const Signup = () => {
-  const [username, setUsername] = React.useState("");
+const Login = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const [file, setFile] = React.useState(null);
   return (
-    <Helmet title="Signup">
+    <Helmet title="Login">
       <section>
         <Container>
           <Row>
             <Col lg="6" className="m-auto text-center">
-              <h3 className="fw-bold fs-4 mb-5">Signup</h3>
+              <h3 className="fw-bold fs-4 mb-5">Login</h3>
               <Form className="auth__form">
-                <FormGroup className="form__group">
-                  <input
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                  />
-                </FormGroup>
-
                 <FormGroup className="form__group">
                   <input
                     type="email"
@@ -45,17 +34,12 @@ const Signup = () => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </FormGroup>
-                <FormGroup className="form__group">
-                  <input
-                    type="file"
-                    onChange={(e) => setFile(e.target.valfiles[0])}
-                  />
-                </FormGroup>
                 <button type="submit" className="buy__btn auth__btn">
-                  Create account
+                  Login
                 </button>
                 <p className="mt-5">
-                  Already have an account? <Link to="/login">Login</Link>
+                  Don't have an account?{" "}
+                  <Link to="/signup">Create an account</Link>
                 </p>
               </Form>
             </Col>
@@ -66,4 +50,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;
