@@ -56,6 +56,35 @@
       cursor: pointer;
     }
   }
+
+  .profile {
+    position: relative;
+    z-index: 100;
+    &__actions {
+      position: absolute;
+      top: 96%;
+      left: 0;
+      width: 90px;
+      z-index: 101;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background: var(--card-bg-01);
+      line-height: 30px;
+      display: none;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      border-radius: 50px;
+    }
+  }
+
+  .show {
+    display: block;
+  }
 }
 
 .cart__icon,
