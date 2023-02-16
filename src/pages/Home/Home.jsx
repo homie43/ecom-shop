@@ -11,6 +11,8 @@ import products from "../../assets/data/products";
 
 import counterImg from "../../assets/images/counter-timer-img.png";
 
+//import useGetData from "../../hooks/useGetData";
+
 import heroImg from "../../assets/images/hero-img.png";
 
 import "./home.scss";

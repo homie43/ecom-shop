@@ -9,7 +9,7 @@ const Clock = () => {
   let interval;
 
   const countDown = () => {
-    const dedline = new Date("Jan 25, 2023").getTime();
+    const dedline = new Date("May 25, 2023").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
