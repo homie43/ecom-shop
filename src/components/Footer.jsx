@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 
-import "./footer.scss";
+import "../SCSS/footer.scss";
 
 const Footer = () => {
   const year = new Date().getFullYear();

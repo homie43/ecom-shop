@@ -4,14 +4,14 @@ import { Container, Row } from "reactstrap";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
-import { auth } from "../../firebase.config";
+import { auth } from "../firebase.config";
 
-import logo from "../../assets/images/eco-logo.png";
-import userIcon from "../../assets/images/user-icon.png";
+import logo from "../assets/images/eco-logo.png";
+import userIcon from "../assets/images/user-icon.png";
 
-import useAuth from "../../hooks/useAuth";
+import useAuth from "../hooks/useAuth";
 
-import "./header.scss";
+import "../SCSS/header.scss";
 
 import { toast } from "react-toastify";
 
