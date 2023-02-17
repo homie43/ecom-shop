@@ -31,6 +31,7 @@ function AddProducts() {
         storage,
         `productImages/${Date.now() + enterProductImg.name}`
       );
+      // eslint-disable-next-line no-unused-vars
       const uploadTask = uploadBytesResumable(storageRef, enterProductImg).then(
         () => {
           getDownloadURL(storageRef).then(async (downloadURL) => {
