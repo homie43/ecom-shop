@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Container, Row, Col } from "reactstrap";
 
-import Helmet from "../../components/Helmet/Helmet";
-import Services from "../../services/Services";
-import ProductsList from "../../components/UI/ProductsList";
-import Clock from "../../components/UI/Clock";
-import products from "../../assets/data/products";
+import Helmet from "../components/Helmet/Helmet";
+import Services from "../services/Services";
+import ProductsList from "../components/UI/ProductsList";
+import Clock from "../components/UI/Clock";
+import products from "../assets/data/products";
 
-import counterImg from "../../assets/images/counter-timer-img.png";
+import counterImg from "../assets/images/counter-timer-img.png";
 
 //import useGetData from "../../hooks/useGetData";
 
-import heroImg from "../../assets/images/hero-img.png";
+import heroImg from "../assets/images/hero-img.png";
 
-import "./home.scss";
+import "../SCSS/home.scss";
 
 const Home = () => {
   const [trendingProducts, setTrendingProducts] = React.useState([]);

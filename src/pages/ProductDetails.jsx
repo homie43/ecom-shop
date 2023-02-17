@@ -3,15 +3,15 @@ import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { addItem } from "../../redux/slices/cartSlice";
+import { addItem } from "../redux/slices/cartSlice";
 import { toast } from "react-toastify";
 
-import products from "../../assets/data/products";
-import Helmet from "../../components/Helmet/Helmet";
-import CommonSection from "../../components/UI/CommonSection";
-import ProductList from "../../components/UI/ProductsList";
+import products from "../assets/data/products";
+import Helmet from "../components/Helmet/Helmet";
+import CommonSection from "../components/UI/CommonSection";
+import ProductList from "../components/UI/ProductsList";
 
-import "./product-details.scss";
+import "../SCSS/product-details.scss";
 
 const ProductDetails = () => {
   const [tab, setTab] = React.useState("desc");
@@ -44,6 +44,7 @@ const ProductDetails = () => {
     const reviewUserName = reviewUser.current.value;
     const reviewUserMsg = reviewMsg.current.value;
 
+    // eslint-disable-next-line no-unused-vars
     const reviewObj = {
       userName: reviewUserName,
       rating,

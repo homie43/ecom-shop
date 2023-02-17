@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 
-import CommonSection from "../../components/UI/CommonSection";
-import Helmet from "../../components/Helmet/Helmet";
-import products from "../../assets/data/products";
-import ProductsList from "../../components/UI/ProductsList";
+import CommonSection from "../components/UI/CommonSection";
+import Helmet from "../components/Helmet/Helmet";
+import products from "../assets/data/products";
+import ProductsList from "../components/UI/ProductsList";
 
-import "./shop.scss";
+import "../SCSS/shop.scss";
 
 const Shop = () => {
   const [productsData, setProductsData] = React.useState(products);

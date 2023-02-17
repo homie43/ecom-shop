@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col, Form, FormGroup } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase.config";
+import { auth } from "../firebase.config";
 import { toast } from "react-toastify";
 
-import Helmet from "../../components/Helmet/Helmet";
+import Helmet from "../components/Helmet/Helmet";
 
-import "./login.scss";
+import "../SCSS/login.scss";
 
 const Login = () => {
   const [email, setEmail] = React.useState("");

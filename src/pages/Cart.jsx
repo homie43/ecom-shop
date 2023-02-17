@@ -4,11 +4,11 @@ import { Container, Row, Col } from "reactstrap";
 import { motion } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 
-import Helmet from "../../components/Helmet/Helmet";
-import CommonSection from "../../components/UI/CommonSection";
-import { removeItem } from "../../redux/slices/cartSlice";
+import Helmet from "../components/Helmet/Helmet";
+import CommonSection from "../components/UI/CommonSection";
+import { removeItem } from "../redux/slices/cartSlice";
 
-import "./cart.scss";
+import "../SCSS/cart.scss";
 
 const Cart = () => {
   const cartTick = ["Image", "Title", "Price", "Qty", "Delete"];

@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 
 import Helmet from "../components/Helmet/Helmet";
 
-import "./login/login.scss";
+import "../SCSS/login.scss";
 
 const Signup = () => {
   const [username, setUsername] = React.useState("");
@@ -37,6 +37,7 @@ const Signup = () => {
       const user = await userCredential.user;
 
       const storageRef = ref(storage, `images/${Date.now() + username}`);
+      // eslint-disable-next-line no-unused-vars
       const uploadTask = uploadBytesResumable(storageRef, file).then(() => {
         getDownloadURL(storageRef).then(async (downloadURL) => {
           // update user profile
