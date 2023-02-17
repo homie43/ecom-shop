@@ -12,6 +12,7 @@ import userIcon from "../../assets/images/user-icon.png";
 import useAuth from "../../hooks/useAuth";
 
 import "./header.scss";
+
 import { toast } from "react-toastify";
 
 const Header = () => {
