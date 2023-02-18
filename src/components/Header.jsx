@@ -98,10 +98,10 @@ const Header = () => {
             </div>
 
             <div className="nav__icons">
-              <span className="favorite__icon">
+              {/* <span className="favorite__icon">
                 <i class="ri-heart-line"></i>
                 <span className="badge">1</span>
-              </span>
+              </span> */}
 
               <span className="cart__icon" onClick={navigateToCart}>
                 <i class="ri-shopping-cart-line"></i>
