@@ -9,16 +9,14 @@ const Clock = () => {
   let interval;
 
   const countDown = () => {
-    const dedline = new Date("May 25, 2023").getTime();
+    const dedline = new Date("December 25, 2023").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
       const different = dedline - now;
 
       const days = Math.floor(different / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (different % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
+      const hours = Math.floor((different % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((different % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((different % (1000 * 60)) / 1000);
 
